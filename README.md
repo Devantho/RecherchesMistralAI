@@ -20,7 +20,7 @@ Dans ce repos vous trouverez les outils suivant:
 - [Des benchmarks sur différent modèles](/benchmarks/)
 
 # 🚀 Trois moyens d’améliorer les performances d’un modèle IA
-![Illustration trois méthodes](chemin/vers/image.jpg)
+![Illustration trois méthodes](https://www.dailydoseofds.com/content/images/size/w1200/2024/11/images_to_frame--5-.png)
 ## [Fine-tuning](Fine%20tuning.md)
 Réentraîner le modèle sur des données spécifiques pour qu’il adopte un ton, un style ou un savoir-faire particulier.
 
