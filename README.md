@@ -17,6 +17,7 @@ Dans ce repos vous trouverez les outils suivant:
 - Un [client](/Programmes/Chatbot%20client-serveur%20C++/Client/) en c++ qui envoie les requête des utilisateurs à un serveur et reçoit les réponses.
 - Un [serveur](/Programmes/Chatbot%20client-serveur%20C++/Serveur/) en c++ qui recoit les question, s'occupe du RAG puis de la génération du prompt pour finir par envoyer le prompt a l'[API Mistral](https://console.mistral.ai/) puis renvoyer la réponse au client.
 > Le client/serveur en c++ fournit de moins bonne réponses que le ChatBot Python, cela viens de la méthode RAG qui est différente je pense.
+- [Des benchmarks sur différent modèles](/benchmarks/)
 
 # 🚀 Trois moyens d’améliorer les performances d’un modèle IA
 ![Illustration trois méthodes](chemin/vers/image.jpg)
