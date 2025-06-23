@@ -63,4 +63,4 @@ created_jobs = client.fine_tuning.jobs.create(
 ```
 
 ## Paramètres
-[Guide de choix des paramètres](https://docs.mistral.ai/guides/sampling/) (Top_p, temperature)
+[Guide de choix des paramètres](https://docs.mistral.ai/guides/sampling/) (Top_p, temperature) Ces paramètres devront être renseignés dans le ChatBot.
