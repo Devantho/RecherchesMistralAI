@@ -1,0 +1,105 @@
+Pour ajouter un utilisateur, commencez par ouvrir la fenêtre de gestion des utilisateurs en cliquant sur l'icône paramètres. Si vous utilisez la carte PS, cliquez sur "Ajouter un utilisateur" et sélectionnez "Ajouter un utilisateur à partir de la carte PS".
+Sans la carte PS, vous devrez saisir manuellement le numéro de facturation, le nom et le prénom de l'utilisateur.
+Si l'utilisateur est un remplaçant, cochez la case correspondante et saisissez les informations de la facturera en dégradé (DEP/DAP/DSI).
+Pour la comptabilité, sélectionnez le type de compta approprié, soit en laissant le système choisir automatiquement, soit en ajoutant manuellement plusieurs comptabilités si nécessaire. Enfin, associez les utilisateurs à leur comptabilité respective pour compléter le processus.
+
+Pour ajouter un utilisateur remplaçant, ouvrez la gestion des utilisateurs en cliquant sur l'icône paramètre puis sélectionnez l'utilisateur à remplacer. Cliquez sur + Utilisateur puis sur ajouter un remplacent pour <Nom du remplacé> puis suivez la procédure.
+
+La saisie d’une ordonnance se déroule comme suit :
+  - Cliquez sur + Ordo en haut à gauche de l’écran principal
+  - Sélectionner le patient souhaiter en double cliquant
+  - Saisie ou récupération d’un prescripteur.
+  - Saisie de la prescription
+  - Impression éventuelle de la DEP/DAP/DSI
+Multi-utilisateurs sélectionnez l’utilisateur destiné à être le propriétaire de l’ordonnance dans la liste en haut à droite de l’écran principal.
+
+Soins2000 connaît les règles de facturation de la NGAP et organise votre journée en 4
+passages, ce qui lui permet de calculer les demis et gratuits, les déplacements et majorations
+automatiquement.
+Vous saisissez vos soins tel que vous les effectuez, en sélectionnant les passages et les articles dont
+ils dépendent (11B, Perfusion, Diabétiques, Pansements lourds, vaccination).
+Le reste est automatique.
+
+Seul le n° de facturation est indispensable pour la facturation et sera introduit dans la facture
+électronique. Il devra être saisi avant de facturer l’ordonnance.
+Le prescripteur peut être un centre de soins, dans ce cas utilisez le numéro de facturation du
+centre.
+Dans de rares cas et uniquement si vous facturez avec la carte vitale, la spécialité et la
+qualité de médecin SNCF ou RATP peuvent agir sur les taux de remboursement. Si c’est le
+cas, les questions adéquates vous seront posées au cours de la facturation.
+
+Si l’ordonnance nécessite une DEP, sélectionnez le ‘code accord‘ et la ‘date de postage’.
+Ces informations influent sur la date possible de début des soins et sur le caractère urgent des soins.
+-Urgence : les soins peuvent commencer à la date de prescription et la case à cocher ‘Urgence’ se valide dans la prescription
+-Réponse favorable : Les soins peuvent commencer à la date de postage de la DEP.
+-10 jours sans réponse : Les soins ne peuvent commencés que 10 jours après la date de postage de la DEP.
+
+Ajuster la date de début des soins en fonction de la réalité
+et/ou des informations de la DEP.
+Si vous ne connaissez pas cette date, vous pourrez la changer
+par la suite même si vous avez saisi des lignes d’actes et
+généré les séances.
+
+Saisie des options de l’ordonnance:
+Urgence
+Modifie la cotation de l’ordonnance.
+Pour les infirmièr(es), si les soins commencent un samedi, ce
+samedi sera facturé comme un jour férié.
+Pour les Kinésithérapeutes il faudra en plus que la séance soit
+effectuée l’après midi.
+Férié
+Agit sur la création de la cotation et la génération des séances.
+Si la case est cochée, les séances seront générées les
+dimanches et jours férié, et un complément de prestation
+‘Férié’ sera ajouté aux séances concernées.
+Si la case est décochée, les séances ne seront pas générées
+les dimanches et jour férié, et seront décalées en fin
+d’ordonnance si l’option ‘Décaler les séances fériées en fin
+d’ordonnance’ est sélectionnée.
+Domicile
+Quand cette case est cochée, les séances créées le sont à
+domicile. Un seul acte ‘Dom’ sera compté par passage.
+Facturer déplacement
+Un acte IFA sera ajouté aux séances effectuées à domicile.
+Décochez cette case si vous effectuez un seul déplacement
+pour effectuer des soins à plusieurs patients (mari-femme)
+
+Saisie des lignes d’actes :
+- Nb Saisie du Nombre d’actes de semaines ou de mois.
+- - Sélection du type de période (acte, semaine, mois)
+- Coéf Coefficient de l’acte. Vous pouvez saisir des coefficients composés (3+3, 1+1+1 ou autre).
+- Art Soins2000 connaît les règles de la NGAP ce qui lui permet d’automatiser la facturation
+  Vous saisissez vos soins tel que vous les effectuez, et il créera des factures prenant en compte l’ensemble des règles de la NGAP
+  Pour cela vous sélectionnez les articles dont dépendent les soins (11b, Perfusion, Diabétiques, Pansements lourds, vaccination) et il calcule les demis et gratuits que les soins soient saisis dans une ou plusieurs prescriptions.
+  Nota : pour les kinésithérapeutes et les orthophonistes cette colonne s’intitule /2, si un deuxième acte est saisi sur un même passage, et que la case est cochée, le coefficient sera divisé par 2
+- Dom Vous permet de sélectionner des lignes d’actes avec et sans déplacement. Un seul déplacement sera retenu par passage.
+- Début Date de début des soins de la ligne d’acte.
+- Tournée Saisissez ici la tournée de la ligne d’acte. Cette colonne n’est visible que si vous avez saisi des tournées au préalable. Voir Gestion des séances.
+- Passage Le passage vous permet de créer plusieurs séances distinctes dans la même journée.
+- Nuit Cochez cette case si la séance s’effectue la nuit. Un seul complément prestation nuit sera retenu par passage. Pour un milieu de nuit saisissez l’heure.
+- Heure Saisie facultative, permet de trier les séances dans l’agenda. L’heure ne vous permet pas de séparer des séances. Si vous voulez créer plusieurs séances dans la même journée, utilisez la colonne ‘Passage’.
+- Saisie des fréquences des actes avec La colonne ‘Tous les’ et les colonnes Lu Ma Me Je Ve Sa Di
+  Deux types de sélection des fréquences sont possibles.
+  *Si vous connaissez les jours de la semaine pendant lesquels s’effectuent les
+  séances, vous devez cocher ces jours en cliquant sur les cases
+  correspondantes.
+  *Si le traitement s’effectue tous les x jours, sélectionnez le nombre de jours
+  (1,2,3 ou 4) en cliquant sur la colonne ‘Tous les’.
+  Si un traitement s’effectue d’une manière plus espacée cliquez sur ‘…’, et
+  saisissez un nombre de jour, ce nombre deviendra sélectionnable dans la liste.
+
+Si vous voulez ajouter des séances en fin d’ordonnance qui n’ont pas été effectuées à cause
+de l’absence du patient, saisissez les manuellement, ou ajoutez des actes aux lignes
+d’actes, mais dans ce cas le nombre de séances prévues sera augmenté.
+Vous ne pouvez pas modifier une absence patient, vous devez supprimer puis recréer
+l’absence.
+Si vous supprimez une absence patient, et qu’il existe des ordonnances pour ce patient ou la
+planification est utilisée, les séances concernées seront créées automatiquement.
+
+Le fait de changer le propriétaire d’une ordonnance ne modifie pas l’exécutant des séances
+déjà planifiées.
+Pour changer l’exécutant des séances d’un coup :
+Si les séances ont été planifiées, vous devez annuler la planification puis régénérer les
+séances.
+Si les séances ont été saisies manuellement vous devez modifier l’exécutant séance par
+séance ou utilisez le bouton ‘Affectation’ dans l’onglet ‘séances’.
