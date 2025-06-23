@@ -13,16 +13,16 @@ Cependant, le fine-tuning peut être utilisé en plus du RAG pour affiner la for
 # Les outils
 Dans ce repos vous trouverez les outils suivant:
 - Un outils en python permettant de benchmark les modèle mistral et rendre un compte rendu au format MarkDown.
-- Un chatbot Python exploitant le principe du RAG. Il commence par convertir la documentation en vecteurs, qu’il stocke ensuite dans une base spécialisée (Faiss). Lorsqu’un utilisateur pose une question, celle-ci est à son tour transformée en vecteurs pour rechercher les passages les plus pertinents dans la base. Le contenu trouvé est alors fourni comme contexte au modèle afin de générer une réponse adaptée.
-- Un client en c++ qui envoie les requête des utilisateurs à un serveur et reçoit les réponses.
-- Un serveur en c++ qui recoit les question, s'occupe du RAG puis de la génération du prompt pour finir par envoyer le prompt a l'[API Mistral](https://console.mistral.ai/) puis renvoyer la réponse au client.
+- Un [chatbot Python](/Programmes/ChatBot%20Python/) exploitant le principe du RAG. Il commence par convertir la documentation en vecteurs, qu’il stocke ensuite dans une base spécialisée (Faiss). Lorsqu’un utilisateur pose une question, celle-ci est à son tour transformée en vecteurs pour rechercher les passages les plus pertinents dans la base. Le contenu trouvé est alors fourni comme contexte au modèle afin de générer une réponse adaptée.
+- Un [client](/Programmes/Chatbot%20client-serveur%20C++/Client/) en c++ qui envoie les requête des utilisateurs à un serveur et reçoit les réponses.
+- Un [serveur](/Programmes/Chatbot%20client-serveur%20C++/Serveur/) en c++ qui recoit les question, s'occupe du RAG puis de la génération du prompt pour finir par envoyer le prompt a l'[API Mistral](https://console.mistral.ai/) puis renvoyer la réponse au client.
 > Le client/serveur en c++ fournit de moins bonne réponses que le ChatBot Python, cela viens de la méthode RAG qui est différente je pense.
 
 # Les trois méthodes pour orienter l'IA pour notre tache
 ![Illustration trois méthodes](chemin/vers/image.jpg)
 
 # 🚀 Trois moyens d’améliorer les performances d’un modèle IA
-## Fine-tuning
+## [Fine-tuning](Fine%20tuning.md)
 Réentraîner le modèle sur des données spécifiques pour qu’il adopte un ton, un style ou un savoir-faire particulier.
 
 ## RAG (Retrieval-Augmented Generation)
