@@ -1,26 +1,26 @@
-# Fine tuning
+# Fine-tuning
 
-Il existe plusieurs méthode pour fine tuner un modèle Mistral, soit depuis l'interface web soit avec du code, dans cet exemple nous utiliserons python.
+Il existe plusieurs méthodes pour fine-tuner un modèle Mistral, soit depuis l'interface web, soit avec du code. Dans cet exemple, nous utiliserons Python.
 
 ## Documentations
-[Fine tuning Documentation Mistral](https://docs.mistral.ai/guides/finetuning/)
+[Documentation Fine-tuning Mistral](https://docs.mistral.ai/guides/finetuning/)
 
-[Choisir correctement les paramètres de l'ia](https://docs.mistral.ai/guides/sampling/)
+[Choisir correctement les paramètres de l'IA](https://docs.mistral.ai/guides/sampling/)
 
 https://docs.mistral.ai/capabilities/finetuning/text_finetuning/
 
 ## Méthode avec l'interface web
-Tout d'abord vous devez vous munir des fichiers  suivant:
-- Jeux de données d'entrainement
-- Fichiers de validation
+Tout d'abord, vous devez vous munir des fichiers suivants :
+- Jeu de données d'entraînement
+- Fichier de validation
 
-Ensuite, vous devrez vous rendre sur [l'interface de finetuning de mistral](https://console.mistral.ai/build/finetuned-models) et cliquer sur "Affiner le modèle". Uplodez vous deux fichiers, choissisez le modèle (Ministral 3B par exemple) et cliquez sur suivant puis Lancer l'entrainement. Au bout de quelque minute vous pourrez retrouver votre modèle fine-tuné sur [l'interface de finetuning de mistral](https://console.mistral.ai/build/finetuned-models), vous pourrez enfin l'utiliser pour créer un agent ia ou autre.
+Ensuite, vous devrez vous rendre sur [l'interface de fine-tuning de Mistral](https://console.mistral.ai/build/finetuned-models) et cliquer sur "Affiner le modèle". Uploadez vos deux fichiers, choisissez le modèle (Ministral 3B par exemple), cliquez sur "Suivant" puis sur "Lancer l'entraînement". Au bout de quelques minutes, vous pourrez retrouver votre modèle fine-tuné sur la même interface. Vous pourrez enfin l'utiliser pour créer un agent IA ou autre.
 
-## Méthode en python
+## Méthode en Python
 
-La méthode en python ne sert uniquement dans un but d'automatisation, elle n'offre pas plude possibilités, de plus elle peut échoué si le fichier d'entrainement n'est pas validé. Néanmoins cette méthode peut être utile.
+La méthode en Python ne sert qu’à des fins d'automatisation. Elle n'offre pas plus de possibilités. De plus, elle peut échouer si le fichier d'entraînement n'est pas validé. Néanmoins, cette méthode peut être utile.
 
-### Utilisez le code suivant pour fine tuné un modèle en python en et ajustez les paramètres.
+### Utilisez le code suivant pour fine-tuner un modèle en Python et ajustez les paramètres :
 ```python
 from mistralai import Mistral
 import os
