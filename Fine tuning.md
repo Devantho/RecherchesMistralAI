@@ -1,3 +1,4 @@
+[Retour au README](/README.md)
 # Fine-tuning
 
 Il existe plusieurs méthodes pour fine-tuner un modèle Mistral, soit depuis l'interface web, soit avec du code. Dans cet exemple, nous utiliserons Python.

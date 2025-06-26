@@ -16,6 +16,7 @@ Dans ce dépôt, vous trouverez les outils suivants :
 - Un [chatbot Python](/Programmes/ChatBot%20Python/) exploitant le principe du RAG. Il commence par convertir la documentation en vecteurs, qu’il stocke ensuite dans une base spécialisée (Faiss). Lorsqu’un utilisateur pose une question, celle-ci est à son tour transformée en vecteurs pour rechercher les passages les plus pertinents dans la base. Le contenu trouvé est alors fourni comme contexte au modèle afin de générer une réponse adaptée.
 - Un [client](/Programmes/Chatbot%20client-serveur%20C++/Client/) en C++ qui envoie les requêtes des utilisateurs à un serveur et reçoit les réponses.
 - Un [serveur](/Programmes/Chatbot%20client-serveur%20C++/Serveur/) en C++ qui reçoit les questions, s'occupe du RAG, puis de la génération du prompt pour finir par envoyer le prompt à l’[API Mistral](https://console.mistral.ai/) avant de renvoyer la réponse au client.
+- Une [api en python](/Programmes/API%20Python/) permettant d'intégrer le système simplement dans n'importe quel programme.
 
 > Le client/serveur en C++ fournit de moins bonnes réponses que le ChatBot Python. Cela vient, je pense, de la méthode RAG qui est différente.
 

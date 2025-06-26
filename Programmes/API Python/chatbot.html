@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot Soins2000</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #90caf9;
+    }
+
+    #chat {
+      border: 1px solid #333;
+      padding: 15px;
+      height: 400px;
+      overflow-y: auto;
+      background-color: #1e1e1e;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .user, .bot {
+      margin-bottom: 15px;
+    }
+
+    .user strong {
+      color: #64b5f6;
+    }
+
+    .bot strong {
+      color: #81c784;
+      display: inline;
+    }
+
+    .bot-content {
+      display: inline-block;
+      max-width: 100%;
+    }
+    #question {
+      width: 70%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #555;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+
+    textarea {
+      width: 70%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #555;
+      background-color: #2a2a2a;
+      color: #fff;
+      resize: vertical;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      background-color: #64b5f6;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      vertical-align: top;
+    }
+
+    button:hover {
+      background-color: #42a5f5;
+    }
+
+    a { color: #90caf9; }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <img src="logo.png" alt="Logo Soins2000" style="width: 70px; margin-bottom: 10px; display: inline;">
+    <h2 style="margin-top: 0;">💬 Chatbot Soins2000</h2>
+  </div>
+  <div id="chat"></div>
+
+  <!-- textarea pour support multi-lignes -->
+  <input type="text" id="question" placeholder="Posez votre question..."></input>
+  <button onclick="sendQuestion()">Envoyer</button>
+  <input type="checkbox" id="debug" name="debug">
+  <label for="debug">Debug</label>
+
+  <script>
+    async function sendQuestion() {
+      const textarea = document.getElementById("question");
+      const question = textarea.value.trim();
+      const debug = document.getElementById("debug").checked;
+
+      if (!question) return;
+
+      const chat = document.getElementById("chat");
+
+      // Affiche la question en remplaçant les \n par <br>
+      const safeQuestion = question
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br>');
+      chat.innerHTML += `<div class="user"><strong>Vous : </strong>${safeQuestion}</div>`;
+
+      try {
+        const response = await fetch("http://localhost:5000/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question, debug })
+        });
+        const data = await response.json();
+
+        // Utilise marked.parse pour gérer les paragraphes et sauts de ligne Markdown
+        const rendered = marked.parse(data.response || "(pas de réponse)");
+
+        chat.innerHTML += `
+          <div class="bot">
+            <strong>Bot :</strong><br>
+            <div class="bot-content">${rendered}</div>
+          </div>
+        `;
+      } catch (err) {
+        console.error("Erreur lors de l'appel au serveur :", err);
+        chat.innerHTML += `
+          <div class="bot">
+            <strong>Bot :</strong><br>
+            <div class="bot-content">Erreur de connexion au serveur.</div>
+          </div>
+        `;
+      }
+
+      // Réinitialise et scroll
+      textarea.value = "";
+      chat.scrollTop = chat.scrollHeight;
+    }
+  </script>
+</body>
+</html>
