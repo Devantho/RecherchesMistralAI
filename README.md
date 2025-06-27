@@ -17,6 +17,7 @@ Dans ce dépôt, vous trouverez les outils suivants :
 - Un [client](/Programmes/Chatbot%20client-serveur%20C++/Client/) en C++ qui envoie les requêtes des utilisateurs à un serveur et reçoit les réponses.
 - Un [serveur](/Programmes/Chatbot%20client-serveur%20C++/Serveur/) en C++ qui reçoit les questions, s'occupe du RAG, puis de la génération du prompt pour finir par envoyer le prompt à l’[API Mistral](https://console.mistral.ai/) avant de renvoyer la réponse au client.
 - Une [api en python](/Programmes/API%20Python/) permettant d'intégrer le système simplement dans n'importe quel programme.
+- Une [api en c++](/Programmes/API%20c++) permettant d'intégrer le système simplement dans n'importe quel programme.
 
 > Le client/serveur en C++ fournit de moins bonnes réponses que le ChatBot Python. Cela vient, je pense, de la méthode RAG qui est différente.
 
@@ -39,3 +40,9 @@ Formuler des instructions précises pour orienter la réponse du modèle dans la
 Utilisés ensemble, ces trois leviers permettent d’exploiter le plein potentiel d’un modèle IA.  
 Le fine-tuning lui donne une personnalité ou une spécialisation métier, le RAG garantit que ses réponses s’appuient sur des données fiables et récentes, et le prompting affine en temps réel la forme et le fond de la sortie.  
 Cette combinaison crée un assistant intelligent, pertinent et réactif, capable de s’adapter à la fois au contexte, à l’actualité et aux besoins de l’utilisateur.
+
+# Finalité
+La finalité de ce stage est l'api en C++ qui pourrait vous permettre d'implémenter facilement et rapidement cet ia en envoyant simplement une requete POST, cette solution est la plus légère possible pour le client, tous est gérer par le serveur de l'api.
+
+## Remerciements
+Je tiens à remercier chaleureusement toute l’équipe de Soins2000 pour l’accueil et la bienveillance dont vous avez fait preuve tout au long de mon stage. . Ce fut une expérience enrichissante et motivante, et je suis très reconnaissant(e) d’avoir pu travailler à vos côtés.
