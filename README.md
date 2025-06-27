@@ -45,4 +45,7 @@ Cette combinaison crée un assistant intelligent, pertinent et réactif, capable
 La finalité de ce stage est l'api en C++ qui pourrait vous permettre d'implémenter facilement et rapidement cet ia en envoyant simplement une requete POST, cette solution est la plus légère possible pour le client, tous est gérer par le serveur de l'api.
 
 ## Remerciements
-Je tiens à remercier chaleureusement toute l’équipe de Soins2000 pour l’accueil et la bienveillance dont vous avez fait preuve tout au long de mon stage. . Ce fut une expérience enrichissante et motivante, et je suis très reconnaissant(e) d’avoir pu travailler à vos côtés.
+Je tiens à remercier chaleureusement toute l’équipe de Soins2000 pour l’accueil et la bienveillance dont vous avez fait preuve tout au long de mon stage. Ce fut une expérience enrichissante et motivante, et je suis très reconnaissant(e) d’avoir pu travailler à vos côtés.
+
+## Warnings
+Je porte votre attention sur le fait que ce repo peut être imcomplet, j'ai exploré plusieurs méthode différentes pendant ce stage, également les programme donné ne sont pas optimisés et ne suivent aucune norme de cyber-sécurité, api sans authentification, communication en http et non en https etc...
